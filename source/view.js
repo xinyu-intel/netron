@@ -1625,6 +1625,7 @@ view.ModelFactoryService = class {
         this.register('./hickle', [ '.h5', '.hkl' ]);
         this.register('./nnef', [ '.nnef', '.dat' ]);
         this.register('./cambricon', [ '.cambricon' ]);
+        this.register('./onednngraph', [ '.json'] );
         this.register('./onednn', [ '.json'] );
     }
 
