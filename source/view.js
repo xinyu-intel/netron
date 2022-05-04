@@ -1555,6 +1555,7 @@ view.ModelFactoryService = class {
         this.register('./flax', [ '.msgpack' ]);
         this.register('./om', [ '.om', '.onnx', '.pb', '.engine' ]);
         this.register('./nnabla', [ '.nntxt' ], [ '.nnp' ]);
+        this.register('./onednngraph', [ '.json'] );
     }
 
     register(id, factories, containers) {

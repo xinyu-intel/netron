@@ -10,9 +10,6 @@ host.BrowserHost = class {
         this._document = window.document;
         this._window = window;
         this._navigator = navigator;
-        if (this._window.location.hostname.endsWith('.github.io')) {
-            this._window.location.replace('https://netron.app');
-        }
         this._window.eval = () => {
             throw new Error('window.eval() not supported.');
         };
