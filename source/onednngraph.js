@@ -162,6 +162,17 @@ onednngraph.Node = class {
         if (attrs) {
             for (const attributeName of Object.keys(attrs)) {
                 this._attributes.push(new onednngraph.Attribute(metadata, type, attributeName, attrs[attributeName].type, attrs[attributeName].value));
+                if (attributeName == 'backend_name') {
+                    if (attrs[attributeName].value == 'dnnl_backend') {
+                        this._type.category = "onednngraph-backend0";
+                    }
+                    else if (attrs[attributeName].value == 'compiler_backend') {
+                        this._type.category = "onednngraph-backend1";
+                    }
+                    else {
+                        // leave color of fake_backend node by default
+                    }
+                }
             }
         }
 
